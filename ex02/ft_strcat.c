@@ -1,22 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jv <jv@student.42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/12 19:48:28 by jv                #+#    #+#             */
+/*   Updated: 2022/02/12 19:48:31 by jv               ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-unsigned int ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-  char *tmp = str;
+	char	*tmp;
 
-  while (*str++);
-
-  return ((int)(str - tmp) - 1);
+	tmp = str;
+	while (*str++)
+		;
+	return ((int)(*str - tmp) - 1);
 }
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
-  unsigned int size = ft_strlen(dest);
-  unsigned int i = 0; 
-  while (src[i]) {
-    dest[size + i] = src[i];
-    i++;
-  }
-  dest[size + i] = src[i];
+	unsigned int	size;
+	unsigned int	i;
 
-  return (dest);
+	size = ft_strlen(dest);
+	i = 0;
+	while (src[i])
+	{
+		dest[size + i] = src[i];
+		i++;
+	}
+	dest[size + i] = src[i];
+	return (dest);
 }
