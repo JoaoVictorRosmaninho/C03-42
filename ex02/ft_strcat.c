@@ -17,7 +17,7 @@ unsigned int	ft_strlen(char *str)
 	tmp = str;
 	while (*str++)
 		;
-	return ((int)(*str - tmp) - 1);
+	return ((int)(str - tmp) - 1);
 }
 
 char	*ft_strcat(char *dest, char *src)
