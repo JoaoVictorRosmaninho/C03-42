@@ -6,7 +6,7 @@
 /*   By: jv <jv@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 19:44:46 by jv                #+#    #+#             */
-/*   Updated: 2022/02/14 22:26:57 by jv               ###   ########.fr       */
+/*   Updated: 2022/02/15 20:20:36 by jv               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@ unsigned int	ft_strlen(char *str)
 	char	*tmp;
 
 	tmp = str;
-	while (*str++)
-		;
-	return ((int)(str - tmp) - 1);
+	while (*str)
+		str++;
+	return ((int)(str - tmp));
 }
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)

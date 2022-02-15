@@ -6,9 +6,11 @@
 /*   By: jv <jv@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 19:21:16 by jv                #+#    #+#             */
-/*   Updated: 2022/02/14 22:16:39 by jv               ###   ########.fr       */
+/*   Updated: 2022/02/15 20:15:46 by jv               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
@@ -27,7 +29,7 @@ unsigned int	ft_strlen(char *str)
 	tmp = str;
 	while (*str)
 		str++;
-	return ((int)(str - tmp) - 1);
+	return ((int)(str - tmp));
 }
 
 char	*ft_strstr(char *str, char *to_find)
