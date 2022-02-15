@@ -6,15 +6,17 @@
 /*   By: jv <jv@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 17:03:33 by jv                #+#    #+#             */
-/*   Updated: 2022/02/12 17:03:35 by jv               ###   ########.fr       */
+/*   Updated: 2022/02/14 22:36:42 by jv               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-unsigned int	i;
+	unsigned int	i;
 
 	i = 0;
+	if (n < 1)
+		return (0);
 	while ((s1[i] == s2[i]) && s1[i] && s2[i] && (i < (n - 1)))
 		i++;
 	return ((int)(s1[i] - s2[i]));
