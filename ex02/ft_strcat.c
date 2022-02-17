@@ -25,7 +25,7 @@ char	*ft_strcat(char *dest, char *src)
 	unsigned int	size;
 	unsigned int	i;
 
-	size = ft_strlen(dest);
+	size = ft_strlen(dest) - 1;
 	i = 0;
 	while (src[i])
 	{
